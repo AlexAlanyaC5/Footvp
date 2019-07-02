@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_01_213529) do
+ActiveRecord::Schema.define(version: 2019_07_02_232900) do
+
+  create_table "game_teams", force: :cascade do |t|
+    t.integer "game_id"
+    t.integer "team_id"
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.datetime "time"
+  end
+
+  create_table "rsvps", force: :cascade do |t|
+    t.boolean "is_attending"
+    t.integer "user_id"
+    t.integer "game_id"
+  end
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
