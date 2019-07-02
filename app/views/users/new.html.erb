@@ -1,0 +1,22 @@
+<%= form_for @user do |f| %>
+  <div>
+  <%= f.label :name %>
+  <%= f.text_field :name %></div>
+  <div>
+  <%= f.label :email %>
+  <%= f.text_field :email %></div>
+  <div>
+  <%= f.label :age %>
+  <%= f.number_field :age %></div>
+  <div>
+  <%= f.label :is_captain, "Captain" %>
+  <%= f.check_box :is_captain %></div>
+  <div>
+  <%= f.label :gender %>
+  <%= f.select :gender, ["male", "female"] %></div>
+  <div>
+  <%= f.label :team_id, "Team Name" %>
+  <%= f.collection_select :team_id, Team.all, :id, :name %></div>
+  <div>
+  <%= f.submit %></div>
+<% end %>
