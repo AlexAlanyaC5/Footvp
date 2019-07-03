@@ -9,8 +9,10 @@ post "/teams", to: "teams#create"
 # post "/teams", to: "teams#show"
 
 #NEW
-resources :users 
-#CREATE
-
-#
+resources :users
+get "/signup", to: "users#new"
+get "/login", to: "sessions#new"
+#get "/sessions" to: "sessions#user"
+post "/sessions", to: "sessions#create"
+delete "/logout", to: "sessions#destroy"
 end

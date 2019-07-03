@@ -10,6 +10,9 @@
   </head>
 
   <body>
+    <%= form_tag "/logout", method: :delete do %>
+      <%= submit_tag "logout" %>
+      <% end %>
     <%= yield %>
   </body>
 </html>

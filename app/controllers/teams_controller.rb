@@ -1,4 +1,4 @@
-class TeamsController < ActionController::Base
+class TeamsController < ApplicationController
   def new
     render :new  #/views/teams/new.html.erb
   end
