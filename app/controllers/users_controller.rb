@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
   before_action :authorized
+  skip_before_action :authorized, only: [:new, :create]
   #before the action, call the method authorized
 
-  def new
+  def new #displays a form
     @user = User.new
     render :new
   end
@@ -16,10 +17,6 @@ class UsersController < ApplicationController
   def show
     #byebug
     @user = User.find(params[:id])
-  end
-
-  def show
-    @users= 
   end
 
   private

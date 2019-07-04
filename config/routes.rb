@@ -7,6 +7,12 @@ get "/teams", to: "teams#index"
 #CREATE
 post "/teams", to: "teams#create"
 # post "/teams", to: "teams#show"
+#NEW
+get "/games/new", to: "games#new"
+get "/games/:id", to: "games#show"
+#INDEX
+get "/games", to: "games#index"
+post "/games", to: "games#create"
 
 #NEW
 resources :users

@@ -1,0 +1,17 @@
+
+<h1>Games</h1>
+<%= form_for @game do |f| %>
+  <div>
+  <%= f.label :name %>
+  <%= f.text_field :name %></div>
+  <div>
+  <%= f.label :time %>
+  <%= f.text_field :time %></div>
+  <div>
+  <%= f.label :location %>
+  <%= f.text_field :location %></div>
+  <div>
+  <%= f.collection_check_boxes :team_ids, Team.all, :id, :name %></div>
+  <div>
+  <%= f.submit %></div>
+<% end %>

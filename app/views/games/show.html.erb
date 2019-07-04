@@ -1,0 +1,9 @@
+<h1>Games</h1>
+<div>
+<%= @game.name %></div>
+<div>
+<%= @game.location %></div>
+<div>
+<%= @game.time %></div>
+<div>
+<%= @game.has_many, through: :game_teams %></div>
